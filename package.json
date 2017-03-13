@@ -1,0 +1,47 @@
+{
+  "name": "jsxls-webpack",
+  "version": "0.0.1",
+  "description": "Test repo for webpack and js-xlsx",
+  "author": "Laszlo KREKACS",
+  "license": "MIT",
+  "homepage": "https://github.com/klaszlo/jsxlsx-webpack",
+  "engines": {
+    "node": ">=7.3.0"
+  },
+  "dependencies": {
+    "finalhandler": "^1.0.0",
+    "http": "0.0.0",
+    "serve-static": "^1.12.1"
+  },
+  "devDependencies": {
+    "angular": "^1.6.3",
+    "autoprefixer": "^6.7.6",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-es2015": "^6.22.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.27.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "less": "^2.7.2",
+    "less-loader": "^3.0.0",
+    "postcss-loader": "^1.3.3",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1",
+    "webpack-shell-plugin": "^0.5.0",
+    "yargs": "^7.0.2"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/webpack --env=dev --progress --colors",
+    "build": "./node_modules/.bin/webpack --env=dev --progress --colors",
+    "server": "node server/tmpserver.js",
+    "watch:build": "./node_modules/.bin/webpack --env=dev --watch --progress --colors",
+    "prod:server": "node_modules/.bin/forever start -l forever.log -o app-out.log -e app-err.log server/app.js",
+    "watch:server": "node_modules/.bin/forever -w start -l forever.log -o app-out.log -e app-err.log server/app.js"
+  },
+  "main": "server/app.js",
+  "private": false
+}
